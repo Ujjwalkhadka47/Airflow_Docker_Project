@@ -75,7 +75,8 @@ Access the Airflow Web UI: You can now access the Apache Airflow web UI by openi
 Set http connection id.
 Connection Type: HTTP
 Host: Your API URL
-Screenshots/http_connections.png
+<img width="791" alt="http_connections" src="https://github.com/Ujjwalkhadka47/Airflow_Docker_Project/assets/141219631/a02f7caa-b4a0-4323-bef8-fd4110d86165">
+
 
 # For Postgres Connection in Airflow
 
@@ -85,7 +86,8 @@ Host: postgres
 Schema: Your database name
 Username: Your Postgres username
 Port: 5432
-Screenshots/postgres_connections.png
+<img width="942" alt="postgres_connections" src="https://github.com/Ujjwalkhadka47/Airflow_Docker_Project/assets/141219631/3da37fcd-05b1-44db-9667-8f9d2897e19a">
+
 
 # For Postgres Connection in Dbeaver
 port: 5433
@@ -112,7 +114,8 @@ This Airflow DAG, named My_DAG, is designed to perform the following tasks:
 Your DAG code, which is located in the dags folder, will automatically be detected and loaded by Apache Airflow running within the Docker container.
 
 # Dag Flow
-Screenshots/dag_flow.png
+<img width="791" alt="dag_flow" src="https://github.com/Ujjwalkhadka47/Airflow_Docker_Project/assets/141219631/ddfefd3e-46e9-4c65-bea9-4972740c8b16">
+
 
 # Final log
 <img width="791" alt="final_log" src="https://github.com/Ujjwalkhadka47/Airflow_Docker_Project/assets/141219631/86aae696-55a8-4c04-87c2-e7c7457d3683">
