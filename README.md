@@ -1,4 +1,4 @@
-Apache Airflow with Docker & Postgres
+# Apache Airflow with Docker & Postgres
 
 Author:
 Ujjwal Khadka - ujjwalkhadka@fusemachines.com
@@ -17,23 +17,23 @@ Now, we will Dockerize our Apache Airflow and finally dump and read data from po
 Create a Dockerfile: In the root directory of your project, create a file named docker-compose.yaml. This file will contain instructions on how to build the Docker image for your project. 
 
 
-# Set the working directory to /app
+Set the working directory to /app
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+Copy the current directory contents into the container at /app
 COPY . /app
 
-# Make port 8080 available to the world outside this container
+Make port 8080 available to the world outside this container
 EXPOSE 8080
 
-# Define environment variable
+Define environment variable
 ENV AIRFLOW_HOME=/app/airflow
 
-# Initialize Airflow database and create docker-compose
+Initialize Airflow database and create docker-compose
 RUN airflow db init
 docker-compose.yaml
 
-# Create a user for Airflow (Change credentials as needed) in .yaml file
+Create a user for Airflow (Change credentials as needed) in .yaml file
 RUN airflow users create \
     --username admin \
     --firstname First \
@@ -42,7 +42,7 @@ RUN airflow users create \
     --email admin@example.com \
     --password admin
 
-# Create a postgres connection in .yaml file
+Create a postgres connection in .yaml file
  postgres:
     image: postgres:latest
     environment:
@@ -54,7 +54,7 @@ RUN airflow users create \
     ports:
       - 5433:5432
 
-# Start the Airflow web server and scheduler
+Start the Airflow web server and scheduler
 docker compose up
 
 Build the Docker Image: Build the Docker image by running the following command in your project's root directory (where the Dockerfile is located):
@@ -71,12 +71,14 @@ docker run -d -p 8080:8080 --name your-airflow-container your-airflow-image:late
 Access the Airflow Web UI: You can now access the Apache Airflow web UI by opening a web browser and navigating to http://localhost:8080.
 
 # For HTTP Connection in Airflow
+
 Set http connection id.
 Connection Type: HTTP
 Host: Your API URL
 Screenshots/http_connections.png
 
 # For Postgres Connection in Airflow
+
 Set postgres connection id.
 Connection Type: Postgres
 Host: postgres
