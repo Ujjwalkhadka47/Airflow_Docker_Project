@@ -115,7 +115,8 @@ Your DAG code, which is located in the dags folder, will automatically be detect
 Screenshots/dag_flow.png
 
 # Final log
-Screenshots/final_log.png
+<img width="791" alt="final_log" src="https://github.com/Ujjwalkhadka47/Airflow_Docker_Project/assets/141219631/86aae696-55a8-4c04-87c2-e7c7457d3683">
+
 
 Conclusion
 
